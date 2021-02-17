@@ -27,7 +27,7 @@
         android:layout_marginTop="200dp"
 
         android:text="Click this button!"
-        android:onClick="onHelloClick"
+
          />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
