@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity{
 
     TextView helloText;
     Button helloButton;
-    ImageView helloPicture;
+    ImageView helloImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity{
         // Objects for hello world
         helloText = (TextView) findViewById(R.id.Hello_World_Text);
         helloButton = (Button) findViewById(R.id.Hello_World_Button);
+        helloImage = (ImageView) findViewById(R.id.Hello_World_Image);
+        helloImage.setRotation(0);
+        helloImage.setX(helloImage.getWidth() / 2);
+        helloImage.setY(helloImage.getHeight() / 2);
         helloText.setTextColor(0xFF000000); helloText.setTextSize(16);
         helloButton.setBackgroundColor(0xFF000000);
         //helloImage = (ImageView) findViewById(R.id.Hello_World_Image);
@@ -36,11 +40,13 @@ public class MainActivity extends AppCompatActivity{
                 if(event.getAction()==MotionEvent.ACTION_DOWN){
                     helloText.setTextColor(0xFF007700);
                     helloText.setTextSize(20);
+                    helloImage.setRotation(30);
                     helloButton.setBackgroundColor(0xFF226600);
                 }
                 else {
                     helloText.setTextColor(0xFF000000);
                     helloText.setTextSize(16);
+                    helloImage.setRotation(0);
                     helloButton.setBackgroundColor(0xFF000000);
                 }
                 return true;
